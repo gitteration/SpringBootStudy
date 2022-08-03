@@ -5,10 +5,12 @@ import lombok.ToString;
 
 
 //@ToString
+//@Set
+//@Get
 // ToString, Get, Set 자동완성 단축키
 //      Windows -> alt + insert
 //      Mac -> 후에 작성하겠음
-// 혹은 만들어줄 필요없이 ToString 어노테이션을 선언하면 자동으로 주입하여 사용가능하다.
+// 혹은 만들어줄 필요없이 ToString, Set, Get 어노테이션을 선언하면 자동으로 주입하여 사용가능하다.
 public class PostCreate {
     public String title;
     public String content;
