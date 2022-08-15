@@ -19,7 +19,7 @@ public class PostControllerTest {
     @Test
     @DisplayName("/posts 요청시 Hellow Spring Boot 출력")
     void test() throws Exception {
-        System.out.println("test");
+        System.out.println("testd");
         mockMvc.perform(get("/posts")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content("{\"title\": \"제목입니다.\", \"content\": \"내용입니다\"}")
