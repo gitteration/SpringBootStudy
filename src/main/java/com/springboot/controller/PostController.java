@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.validation.Valid;
 import java.util.Map;
 
 @Slf4j
@@ -16,12 +17,15 @@ public class PostController {
     // 글 등록으로는 POST Method 사용
 
     @GetMapping("/posts")
-    public String post(@RequestBody PostCreate params){
+    public String post(@RequestBody @Valid PostCreate params){
+        /*  -- 데이터를 검증하는 이유
+        *  1. client 개발자가 깜박할 수 있고 실수로 값을 누락되는 경우도 있다.
+        *  2. 외부에 트랙커가 값을 임의로 조작해서 보낼 수 있다.
+        *  3. DB에 값을 저장할 때 의도치 않은 오류가 발생할 수 있다.
+        * */
         log.info("params={}", params.toString());
         return "Hellow Spring Boot";
     }
-
-
 //    parameters을 Map으로 한번에 받을 수도 있고
 //    public String post(@RequestParam Map<String, String> params){
 //        log.info("params={}", params);

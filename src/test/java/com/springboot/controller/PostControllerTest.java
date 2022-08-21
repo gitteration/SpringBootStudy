@@ -29,4 +29,17 @@ public class PostControllerTest {
                 .andDo(print());
 
     }
+
+    @Test
+    @DisplayName("/posts 요청시 title 필수")
+    void test2() throws Exception {
+        mockMvc.perform(get("/posts")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content("{\"title\": \"\", \"content\": \"내용입니다\"}")
+                )
+                .andExpect(status().isOk())
+                .andExpect(content().string("Hellow Spring Boot"))
+                .andDo(print());
+
+    }
 }
