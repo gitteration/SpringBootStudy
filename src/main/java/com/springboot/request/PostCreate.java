@@ -32,6 +32,14 @@ public class PostCreate {
     //        this.content = content;
     //    }
 
+//    public void setTitle(String title) {
+//        this.title = title;
+//    }
+//
+//    public void setContent(String content) {
+//        this.content = content;
+//    }
+
     // PostController에서 toString 메서드를 사용하기 때문에 만들어줘야 한다
     // 후에 테스트 코드를 실행해보면 해당 params가 null로 나오는데 set 메서드를 만들어주면 된다.
     //    @Override
