@@ -2,18 +2,10 @@ package com.springboot.controller;
 
 import com.springboot.request.PostCreate;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.validation.BindingResult;
-import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-
 import javax.validation.Valid;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
 @Slf4j
 @RestController
 public class PostController {
@@ -28,6 +20,7 @@ public class PostController {
         *  3. DB에 값을 저장할 때 의도치 않은 오류가 발생할 수 있다.
         * */
         log.info("params={}", params.toString());
+        log.info("test");
         return "Hellow Spring Boot";
     }
 //    parameters을 Map으로 한번에 받을 수도 있고
